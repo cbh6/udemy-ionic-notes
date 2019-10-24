@@ -30,18 +30,6 @@
   color: red !important;
 }
 
-/*
-
-    Copien este código dentro del archivo 
-    Global.scss
-
-*/
-
-.rojo span,
-.rojo .sc-ion-action-sheet-md {
-  color: red !important;
-}
-
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -49,9 +37,19 @@
   animation-fill-mode: both;
 }
 
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
 .animated.fast {
   -webkit-animation-duration: 400ms;
   animation-duration: 400ms;
+}
+
+.animated.slow {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -77,4 +75,60 @@
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
+}
+
+@-webkit-keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.5;
+  }
+}
+
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
 }
