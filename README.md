@@ -1,4 +1,5 @@
-# Notas relacionadas con el curso de Udemy: ionic 5: Crear aplicaciones IOS, Android y PWAs con Angular
+# Udemy: ionic 5: Crear aplicaciones IOS, Android y PWAs con Angular
+# Notas del curso:
 
 https://www.udemy.com/course/ionic-ios-android-pwa-appstore-playstore-push/
 
@@ -12,6 +13,6 @@ Encontramos 3 directorios principales
 
 ## Secciones
 
-- 7. Aplicación noticias]
+7. Aplicación noticias
   - [Notas](./07.App&#32;noticias.md)
   - [Proyecto](./Ejemplos&#32;ionic/04-noticias)
