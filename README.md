@@ -12,6 +12,6 @@ Encontramos 3 directorios principales
 
 ### Secciones
 
-7. Aplicación noticias
+- 7 - Aplicación noticias
   - [Notas](./07.App&#32;noticias.md)
   - [Proyecto](./Ejemplos&#32;ionic/04-noticias)
