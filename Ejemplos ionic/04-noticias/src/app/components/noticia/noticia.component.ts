@@ -3,6 +3,7 @@ import { Article } from '../../interfaces/interfaces';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { ActionSheetController } from '@ionic/angular';
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { DataLocalService } from '../../services/data-local.service';
 
 @Component({
   selector: 'app-noticia',
@@ -13,8 +14,12 @@ export class NoticiaComponent implements OnInit {
 
   @Input() noticia: Article;
   @Input() index: number;
+  @Input() enFavoritos;
 
-  constructor(private iab: InAppBrowser, private actionSheetCtr: ActionSheetController, private socialSharing: SocialSharing) { }
+  constructor(private iab: InAppBrowser,
+    private actionSheetCtr: ActionSheetController,
+    private socialSharing: SocialSharing,
+    private dataLocalService: DataLocalService) { }
 
   ngOnInit() { }
 
@@ -23,6 +28,31 @@ export class NoticiaComponent implements OnInit {
   }
 
   async lanzarMenu() {
+
+    let guardarBorrarBtn;
+
+    if (this.enFavoritos) {
+      guardarBorrarBtn = {
+        text: 'Borrar Favorito',
+        icon: 'trash',
+        cssClass: 'action-dark',
+        handler: () => {
+          console.log('Borrar Favorito clicked');
+          this.dataLocalService.borrarFavorito(this.noticia);
+        }
+      }
+    } else {
+      guardarBorrarBtn = {
+        text: 'Favorito',
+        icon: 'star',
+        cssClass: 'action-dark',
+        handler: () => {
+          console.log('Favorito clicked');
+          this.dataLocalService.guardarFavorito(this.noticia);
+        }
+      }
+    }
+
     const actionSheet = await this.actionSheetCtr.create({
       buttons: [{
         text: 'Compartir',
@@ -37,14 +67,9 @@ export class NoticiaComponent implements OnInit {
             this.noticia.url
           );
         }
-      }, {
-        text: 'Favorito',
-        icon: 'star',
-        cssClass: 'action-dark',
-        handler: () => {
-          console.log('Favorito clicked');
-        }
-      }, {
+      },
+        guardarBorrarBtn,
+      {
         text: 'Cancelar',
         icon: 'close',
         cssClass: 'action-dark',

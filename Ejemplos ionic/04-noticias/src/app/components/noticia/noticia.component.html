@@ -18,6 +18,7 @@
     (click)="abrirNoticia()"
     *ngIf="noticia.urlToImage"
     [src]="noticia.urlToImage"
+    class="animated fadeIn fast"
   ></ion-img>
   <ion-card-content>
     <p>{{ noticia.description }}</p>
