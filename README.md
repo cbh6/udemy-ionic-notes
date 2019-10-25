@@ -13,8 +13,8 @@ Encontramos 3 directorios principales
 ### Secciones
 
 - 7 - Aplicación noticias
-  - [Notas](<./07.App noticias.md>)
-  - [Proyecto](<./Ejemplos ionic/04-noticias>)
+  - [Notas](./07.&#32;App&#32;noticias.md)
+  - [Proyecto](./Ejemplos&#32;ionic/04-noticias)
 
 ![Captura 1](./Capturas/04-noticias/noticias1.PNG "Noticias App 1")
 ![Captura 2](./Capturas/04-noticias/noticias2.PNG "Noticias App 2")
