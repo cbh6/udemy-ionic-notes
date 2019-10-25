@@ -16,6 +16,6 @@ Encontramos 3 directorios principales
   - [Notas](<./07.App noticias.md>)
   - [Proyecto](<./Ejemplos ionic/04-noticias>)
 
-![Captura 1](/Capturas/04-noticias/noticias1.png "Noticias App 1")
-![Captura 1](/Capturas/04-noticias/noticias2.png "Noticias App 2")
-![Captura 1](/Capturas/04-noticias/noticias3.png "Noticias App 3")
+![Captura 1](./Capturas/04-noticias/noticias1.png "Noticias App 1")
+![Captura 2](./Capturas/04-noticias/noticias2.png "Noticias App 2")
+![Captura 3](./Capturas/04-noticias/noticias3.png "Noticias App 3")
