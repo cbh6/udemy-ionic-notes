@@ -1,0 +1,23 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>Favoritos</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div *ngFor="let genero of favoritosPorGenero">
+    <ion-grid *ngIf="genero.pelis.length">
+      <ion-row>
+        <ion-col>
+          <h4>{{ genero.titulo }}</h4>
+        </ion-col>
+      </ion-row>
+      <app-slideshow-poster
+        (abrirDetalle)="mostrarDetalle($event)"
+        [peliculas]="genero.pelis"
+      ></app-slideshow-poster>
+    </ion-grid>
+  </div>
+</ion-content>

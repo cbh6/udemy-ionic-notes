@@ -1,0 +1,36 @@
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>Películas Nuevas</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-slideshow-backdrop
+    [peliculas]="peliculasRecientes"
+    (abrirDetalle)="mostrarDetalle($event)"
+  ></app-slideshow-backdrop>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>Cartelera</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-slideshow-poster
+    [peliculas]="peliculasRecientes"
+    (abrirDetalle)="mostrarDetalle($event)"
+  ></app-slideshow-poster>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <h3>Populares</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-slideshow-pares
+    [peliculas]="populares"
+    (cargarMas)="cargarMas()"
+    (abrirDetalle)="mostrarDetalle($event)"
+  ></app-slideshow-pares>
+</ion-content>
