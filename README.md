@@ -44,7 +44,7 @@ Encontramos 3 directorios principales
   - [Proyecto](./Ejemplos&#32;ionic/05-peliculasApp)
   - [Live Demo](https://ionic-peliculas-7e5c8.firebaseapp.com/tabs/tab1) -> Abrir desde dispositivo movil o desktop como vista movil;
 
-![Captura 1](./Capturas/05-peliculasApp/Captura1.PNG "Noticias App 1")
-![Captura 2](./Capturas/05-peliculasApp/Captura2.PNG "Noticias App 2")
-![Captura 3](./Capturas/05-peliculasApp/Captura3.PNG "Noticias App 3")
-![Captura 4](./Capturas/05-peliculasApp/Captura4.PNG "Noticias App 4")
+![Captura 1](./Capturas/05-peliculasApp/Captura1.png "Noticias App 1")
+![Captura 2](./Capturas/05-peliculasApp/Captura2.png "Noticias App 2")
+![Captura 3](./Capturas/05-peliculasApp/Captura3.png "Noticias App 3")
+![Captura 4](./Capturas/05-peliculasApp/Captura4.png "Noticias App 4")
