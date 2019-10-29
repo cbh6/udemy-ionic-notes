@@ -51,7 +51,7 @@ Encontramos 3 directorios principales
 
 - 10 - Aplicación QR Scanner
   - [Notas](./10.&#32;App&#32;lectora&#32;de&#32;códigos&#32;de&#32;barra&#32;y&#32;QR.md)
-  - [Proyecto](./Ejemplos&#32;ionic/06-../Ejemplos&#32;ionic/06-qrscanner)
+  - [Proyecto](./Ejemplos&#32;ionic/06-qrscanner)
   - [Live Demo](https://ionic-scan.web.app/tabs) -> Abrir desde dispositivo movil o desktop como vista movil. Como PWA no funciona el lector de QR. Habría que abrirla de forma nativa en el dispotivo.
 
 ![Captura 1](./Capturas/06-qrScanner/Captura1.png "QRScan App 1")
