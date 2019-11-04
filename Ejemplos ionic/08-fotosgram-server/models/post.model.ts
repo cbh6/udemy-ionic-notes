@@ -1,39 +1,38 @@
+
 import { Schema, Document, model } from 'mongoose';
-import { Usuario } from './usuario.model';
 
 const postSchema = new Schema({
-  created: {
-    type: Date
-  },
-  mensaje: {
-    type: String
-  },
-  img: [
-    {
-      type: String
+
+    created: {
+        type: Date
+    },
+    mensaje: {
+        type: String
+    },
+    imgs: [{
+        type: String
+    }],
+    coords: {
+        type: String   // -13.313123, 12.3123123
+    },
+    usuario: {
+        type: Schema.Types.ObjectId,
+        ref: 'Usuario',
+        required: [ true, 'Debe de existir una referencia a un usuario' ]
     }
-  ],
-  coords: {
-    type: String
-  },
-  usuario: {
-    type: Schema.Types.ObjectId,
-    ref: 'Usuario',
-    required: [true, 'Debe de existir una referencia a usuario']
-  }
 });
 
-postSchema.pre<IPost>('save', function(next) {
-  this.created = new Date();
-  next();
+postSchema.pre<IPost>('save', function( next ) {
+    this.created = new Date();
+    next();
 });
 
 interface IPost extends Document {
-  created: Date;
-  mensaje: string;
-  img: string[];
-  coords: string;
-  usuario: string;
+    created: Date;
+    mensaje: string;
+    img: string[];
+    coords: string;
+    usuario: string;
 }
 
 export const Post = model<IPost>('Post', postSchema);
